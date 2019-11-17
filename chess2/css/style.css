@@ -1,0 +1,385 @@
+@keyframes black {
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes white {
+  from {
+    transform: rotate(180deg);
+  }
+
+  to {
+    transform: none;
+  }
+}
+
+@keyframes link {
+  from {
+    color: rgb(39, 39, 39);
+    border: 2px solid rgb(39, 39, 39);
+    background: none;
+  }
+
+  to {
+    color: white;
+    border: 2px solid rgb(72, 204, 54);
+    background: rgb(72, 204, 54);
+  }
+}
+
+@keyframes btn {
+  from {
+    color: rgb(39, 39, 39);
+    border: 2px solid rgb(39, 39, 39);
+    background: none;
+  }
+
+  to {
+    color: white;
+    border: 2px solid rgb(56, 142, 255);
+    background: rgb(56, 142, 255);
+  }
+}
+
+@keyframes back {
+  from {
+    color: rgb(39, 39, 39);
+    background: none;
+  }
+
+  to {
+    color: white;
+    background: rgb(39, 39, 39);
+  }
+}
+
+/* 
+td:hover {
+  box-shadow: inset 0 0 0 1000px rgba(130, 255, 167, 0.55);
+} */
+
+* {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  color: rgb(48, 25, 23);
+}
+
+body {
+  background-color: #fafafa;
+}
+
+table {
+  animation-duration: 1s;
+  border-collapse: collapse;
+  float: left;
+}
+
+td > img {
+  animation-duration: 1s;
+  display: block;
+  width: 90%;
+  height: 90%;
+  margin: auto;
+}
+
+div#info {
+  width: 95%;
+  float: left;
+  margin-left: 20px;
+  margin-top: 30px;
+  color: rgb(39, 39, 39);
+}
+
+div#info h2 {
+  color: inherit;
+}
+
+div#info a {
+  text-decoration: none;
+  border: 2px solid rgb(39, 39, 39);
+  color: rgb(39, 39, 39);
+  padding: 5px;
+  border-radius: 5px;
+  float: left;
+}
+
+div#info a:hover {
+  animation-duration: 0.5s;
+  animation-name: link;
+  color: white;
+  border: 2px solid rgb(72, 204, 54);
+  background: rgb(72, 204, 54);
+}
+
+div#info button.figure {
+  border: 2px solid rgb(39, 39, 39);
+  color: rgb(39, 39, 39);
+  padding: 5px;
+  border-radius: 5px;
+  float: left;
+  background: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+h2.danger {
+  color: rgb(167, 0, 0) !important;
+}
+
+h2.info {
+  color: rgb(72, 204, 54) !important;
+}
+
+div#info button.figure:hover {
+  animation-duration: 0.5s;
+  animation-name: btn;
+  color: white;
+  border: 2px solid rgb(56, 142, 255);
+  background: rgb(56, 142, 255);
+}
+
+div#history p {
+  text-align: center;
+  color: rgb(39, 39, 39);
+}
+
+div#history li {
+  color: rgb(39, 39, 39);
+}
+
+div#history button {
+  float: left;
+  text-decoration: none;
+  border: 2px solid rgb(39, 39, 39);
+  color: rgb(39, 39, 39);
+  background: white;
+  padding: 5px;
+  border-radius: 5px;
+  float: left;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
+  cursor: pointer;
+}
+
+div#history button:hover {
+  animation-duration: 0.5s;
+  animation-name: back;
+  color: white;
+  background: rgb(39, 39, 39);
+}
+
+div#history button:active, div#history button:focus {
+  outline: none;
+}
+
+div#white ol {
+  direction: ltr;
+}
+
+::-webkit-scrollbar{
+  width: 0.6vw;
+  height: 0.6vw;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(151, 151, 151);
+  border-radius: 0.3vw;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: rgb(39, 39, 39);
+}
+
+footer {
+  background: #fafafa;
+  border-top: 1px solid rgb(39, 39, 39);
+  color: rgb(39, 39, 39);
+  width: 100%;
+  text-align: center;
+  height: 5%;
+  float: left;
+  bottom: 0px;
+  position: sticky;
+}
+
+footer p {
+  color: inherit;
+}
+
+@media all and (min-width: 508px) {
+  div#info button.figure img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  div#history {
+    float: left;
+    margin-top: 22px;
+    margin-left: 50px;
+    height: 442px;
+  }
+  
+  div#white {
+    float: left;
+    width: 110px;
+    height: 410px;
+    border-right: 2px solid rgb(39, 39, 39);
+    overflow: auto;
+    direction: rtl;
+  }
+  
+  div#black {
+    float: left;
+    width: 110px;
+    height: 410px;
+    overflow: auto;
+  }
+  
+  td {
+    width: 50px;
+    height: 50px; 
+    border: 2px solid rgb(48, 25, 23);
+  }
+  
+  tr.start td {
+    height: 20px;
+    vertical-align: bottom;
+    text-align: center;
+    border: none;
+    transform: rotate(180deg);
+  }
+  
+  tr.start :first-child  {
+    width: 20px;
+    border: none;
+  }
+  
+  tr.start :last-child  {
+    width: 20px;
+    border: none;
+  }
+  
+  tr.end td {
+    height: 20px;
+    vertical-align: top;
+    text-align: center;
+    border: none;
+  }
+  
+  tr.end :first-child  {
+    width: 20px;
+    border: none;
+  }
+  
+  tr.end :last-child  {
+    width: 20px;
+    border: none;
+  }
+  
+  td.first {
+    width: 20px;
+    text-align: right;
+    border: none;
+  }
+  
+  td.last {
+    width: 20px;
+    text-align: left;
+    border: none;
+    transform: rotate(180deg);
+  }
+}
+
+@media all and (max-width: 507px) {
+  body {
+    margin: 0;
+  }
+
+  div#info button.figure img {
+    width: 11vw;
+    height: 11vw;
+  }
+  
+  div#history {
+    float: left;
+    margin-top: 22px;
+    width: 100vw;
+    height: 442px;
+  }
+  
+  div#white {
+    float: left;
+    width: calc((100vw - 2px)/2);
+    height: 410px;
+    border-right: 2px solid rgb(39, 39, 39);
+    overflow: auto;
+    direction: rtl;
+  }
+  
+  div#black {
+    float: left;
+    width: calc((100vw - 2px)/2);
+    height: 410px;
+    overflow: auto;
+  }
+  
+  td {
+    width: 11vw;
+    height: 11vw; 
+    border: 0.5vw solid rgb(48, 25, 23);
+  }
+  
+  tr.start td {
+    height: 2vw;
+    vertical-align: bottom;
+    text-align: center;
+    border: none;
+    transform: rotate(180deg);
+  }
+  
+  tr.start :first-child  {
+    width: 2vw;
+    border: none;
+  }
+  
+  tr.start :last-child  {
+    width: 2vw;
+    border: none;
+  }
+  
+  tr.end td {
+    height: 2vw;
+    vertical-align: top;
+    text-align: center;
+    border: none;
+  }
+  
+  tr.end :first-child  {
+    width: 2vw;
+    border: none;
+  }
+  
+  tr.end :last-child  {
+    width: 2vw;
+    border: none;
+  }
+  
+  td.first {
+    width: 2vw;
+    text-align: right;
+    border: none;
+  }
+  
+  td.last {
+    width: 2vw;
+    text-align: left;
+    border: none;
+    transform: rotate(180deg);
+  }
+}
